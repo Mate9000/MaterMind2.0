@@ -14,7 +14,7 @@ public class Arraylistex02 {
 		i.add(3);
 		i.add(4);
 		i.add(5);
-		i.add(543);
+		i.add(543g);
 		for (int x = i.size() - 1; x >= 0; x--) {
 			if (i.get(x)%2 == 0)
 				i.remove(x);
