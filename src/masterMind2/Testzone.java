@@ -14,6 +14,7 @@ public class Testzone {
 			numbers[e] = (int) random.nextInt(6);
 	        String secretCode = "" + numbers[e];
 	        System.out.print(secretCode);
+		
 		}
 	}
 
