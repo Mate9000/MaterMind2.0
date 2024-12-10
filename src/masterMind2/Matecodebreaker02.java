@@ -40,7 +40,7 @@ public class Matecodebreaker02 {
 			// en het breakt zodat de code zou stoppen als de code goed is
 			if (sumGeusses.equals(secretCode)) {
 				System.out.println("Yippieeeee! You win!");
-				
+				break;
 			} else {
 
 				// checks de eerste digit als het goed niet goed of een dichtbi is of het
