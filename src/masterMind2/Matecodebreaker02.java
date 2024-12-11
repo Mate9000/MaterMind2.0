@@ -38,7 +38,7 @@ public class Matecodebreaker02 {
 			}
 			// als je de 4 digit code goed hebt geraden dan krijg je deze tekst hier onder
 			// en het breakt zodat de code zou stoppen als de code goed is
-			if (sumGeusses.equals(secretCode)) {
+			if (geusses.equals(secretCode)) {
 				System.out.println("Yippieeeee! You win!");
 				break;
 			} else {
