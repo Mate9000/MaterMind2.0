@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class Matecodebreaker02 {
 
 	public static void main(String[] args) {
+		//functie's
+		MasterMath gen = new MasterMath();
 		// aangeven dat de max attempts 10 is
 		int maxAttempts = 10;
 		// maakt zeker dat de schrijfer kan typen later op in de code
@@ -15,12 +17,7 @@ public class Matecodebreaker02 {
 		Random random = new Random();
 		int r = 0;
 		int[] numbers = new int[4];
-		String secretCode = "";
-		for (int e = 0; e < numbers.length; e++) {
-			numbers[e] = (int) random.nextInt(6);
-			secretCode = "" + numbers[e];
-			System.out.print(secretCode);
-		}
+		String secretCode = gen.generator(numbers);
 
 		System.out.println("only 4 digit code allowed otherwise game crashes");
 		// dit is de attempt counter en het voegt 1 erbij bij elke gok
