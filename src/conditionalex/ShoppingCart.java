@@ -3,7 +3,7 @@ package conditionalex;
 public class ShoppingCart {
 
     public static void main(String[] args) {
-        Calculator calc = new Calculator();
+        Calculator_week7 calc = new Calculator_week7();
         int addResult = calc.add(43, 79);
         System.out.println("Add Result: " + addResult);
 

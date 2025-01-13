@@ -1,7 +1,6 @@
 package masterMind2;
 
 import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Matecodebreaker02 {
@@ -14,7 +13,6 @@ public class Matecodebreaker02 {
 		// maakt zeker dat de schrijfer kan typen later op in de code
 		Scanner sc = new Scanner(System.in);
 		// did randomises de code verder op in d code
-		Random random = new Random();
 		int r = 0;
 		int[] numbers = new int[4];
 		String secretCode = gen.generator(numbers);
@@ -22,16 +20,15 @@ public class Matecodebreaker02 {
 		System.out.println("only 4 digit code allowed otherwise game crashes");
 		// dit is de attempt counter en het voegt 1 erbij bij elke gok
 		for (int i = 1; i <= maxAttempts; i++) {
-			// dit print uit jouw aantal attempts die nog hept en de digit code tussen de 0
+			// dit print uit jouw aantal attempts die je nog hept en de digit code tussen de 0
 			// en 5 mag gegokt worden
 			System.out.println("Attempt " + i + ": Enter your 4-digit guess from 0 to 5:");
-			// hier hier heb ik a b c en d die eigenlijk de x y z en w zijn maar de verschil
-			// hier is dat deze de gokken zijn en de x y z en w een random nummer is
+
 			int[] geusses = new int[4];
-			String sumGeusses = "";
+	
 			for (int x = 0; x < numbers.length; x++) {
 				geusses[x] = (int) sc.nextInt();
-				sumGeusses = "" + numbers[x];
+
 
 			}
 			// als je de 4 digit code goed hebt geraden dan krijg je deze tekst hier onder

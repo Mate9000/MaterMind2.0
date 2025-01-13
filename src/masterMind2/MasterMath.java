@@ -7,7 +7,7 @@ public class MasterMath {
     public String generator (int[] numbers) {
 	for (int e = 0; e < numbers.length; e++) {
 		numbers[e] = (int) random.nextInt(6);
-		secretCode = "" + numbers[e];
+		secretCode = "" + numbers[0]+ numbers[1]+ numbers[2]+ numbers[e];
 	}
 	return secretCode;
 	}
