@@ -24,14 +24,7 @@ public class Matecodebreaker02 {
 			// en 5 mag gegokt worden
 			System.out.println("Attempt " + i + ": Enter your 4-digit guess from 0 to 5:");
 
-			int[] geusses = new int[4];
-	
-			for (int x = 0; x < numbers.length; x++) {
-				geusses[x] = (int) sc.nextInt();
-
-
-			}
-			// als je de 4 digit code goed hebt geraden dan krijg je deze tekst hier onder
+			int[] geusses = gen.geusses();	
 			// en het breakt zodat de code zou stoppen als de code goed is
 			if (Arrays.equals(numbers, geusses)) {
 				System.out.println("Yippieeeee! You win!");
