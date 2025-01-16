@@ -25,57 +25,9 @@ public class Matecodebreaker02 {
 			System.out.println("Attempt " + i + ": Enter your 4-digit guess from 0 to 5:");
 
 			int[] geusses = gen.geusses();	
+			int checker = gen.checker(numbers, geusses);
 			// en het breakt zodat de code zou stoppen als de code goed is
-			if (Arrays.equals(numbers, geusses)) {
-				System.out.println("Yippieeeee! You win!");
-				break;
-			} else {
-
-				// checks de eerste digit als het goed niet goed of een dichtbi is of het
-				// helemaal fout is
-				r = 0;
-				if (geusses[r] == numbers[r]) {
-					System.out.print("G");
-				} else if (geusses[r] == numbers[1] || geusses[r] == numbers[2] || geusses[r] == numbers[3]) {
-					System.out.print("N");
-				} else {
-					System.out.print("-");
-				}
-				r++;
-				// checks de tweede digit als het goed niet goed of een dichtbi is of het
-				// helemaal fout is
-				if (geusses[r] == numbers[r]) {
-					System.out.print("G");
-				} else if (geusses[r] == numbers[0] || geusses[r] == numbers[2] || geusses[r] == numbers[3]) {
-					System.out.print("N");
-				} else {
-					System.out.print("-");
-				}
-				r++;
-				// checks de derde digit als het goed niet goed of een dichtbi is of het
-				// helemaal fout is
-				if (geusses[r] == numbers[r]) {
-					System.out.print("G");
-				} else if (geusses[r] == numbers[1] || geusses[r] == numbers[0] || geusses[r] == numbers[3]) {
-					System.out.print("N");
-				} else {
-					System.out.print("-");
-				}
-				// checks de vierde digit als het goed niet goed of een dichtbi is of het
-				// helemaal fout is
-				r++;
-				if (geusses[r] == numbers[r]) {
-					System.out.print("G");
-				} else if (geusses[r] == numbers[1] || geusses[r] == numbers[2] || geusses[r] == numbers[0]) {
-					System.out.print("N");
-				} else {
-					System.out.print("-");
-				}
-
-				// did maakt zeker dat de nakijk ding niet samen zit met de attempt counter dus
-				// het is boven aan de attempt counter en niet samen in een zin
-				System.out.println();
-			}
+		
 
 			if (i == maxAttempts) {
 				System.out.println("Womp, Womp! You've used all attempts."); // als je max attempts op is dus max
