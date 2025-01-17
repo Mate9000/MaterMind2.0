@@ -76,7 +76,6 @@ public class MasterMath {
 				System.out.print("-");
 			}
 
-			// did maakt zeker dat de nakijk ding niet samen zit met de attempt counter dus
 			// het is boven aan de attempt counter en niet samen in een zin
 			System.out.println();
 		}
