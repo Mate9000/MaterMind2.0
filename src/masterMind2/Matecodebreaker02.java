@@ -29,7 +29,7 @@ public class Matecodebreaker02 {
 			int winner = gen.winner(numbers, geusses);
 
 			if (winner == 1) {
-				break;
+				return;
 			} else {
 				// en het breakt zodat de code zou stoppen als de code goed is
 
@@ -42,8 +42,7 @@ public class Matecodebreaker02 {
 
 				}
 			}
-
-			sc.close(); // scanner is hier gesloten
 		}
+		sc.close(); // scanner is hier gesloten
 	}
 }
