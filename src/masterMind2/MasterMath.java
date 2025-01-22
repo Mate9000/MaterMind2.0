@@ -6,80 +6,70 @@ import java.util.Scanner;
 
 public class MasterMath {
 	Random random = new Random();
-	String secretCode = "";
 
 	public String generator(int[] numbers) {
+		String secretCode = "";
 		for (int e = 0; e < numbers.length; e++) {
-			numbers[e] = (int) random.nextInt(6);
-			secretCode = "" + numbers[0] + numbers[1] + numbers[2] + numbers[e];
+			numbers[e] = random.nextInt(6);
+			secretCode += numbers[e];
 		}
 		return secretCode;
 	}
 
-	public int[] geusses() {
-		int[] guesses = new int[4];
+	public int[] guessInput() {
+		int[] guess = new int[4];
 		Scanner sc = new Scanner(System.in);
-		for (int x = 0; x < guesses.length; x++) {
+		for (int x = 0; x < guess.length; x++) {
 			try {
-				guesses[x] = sc.nextInt();
+				guess[x] = sc.nextInt();
 			} catch (Exception InputMismatchException) {
-
 				System.out.println("nee mag nie");
 				sc.nextLine();
 				x--;
 			}
 		}
-		return guesses;
+		return guess;
 	}
 
-	public int winner(int[] geusses, int[] numbers) {
-		if (Arrays.equals(numbers, geusses)) {
+	public boolean winner(int[] guess, int[] numbers) {
+		if (Arrays.equals(numbers, guess)) {
 			System.out.println("Yippieeeee! You win!");
-			return 1;
+			return true;
 		} else {
-
-
-				int r = 0;
-				if (geusses[r] == numbers[r]) {
-					System.out.print("G");
-				} else if (geusses[r] == numbers[1] || geusses[r] == numbers[2] || geusses[r] == numbers[3]) {
-					System.out.print("N");
-				} else {
-					System.out.print("-");
-				}
-				r++;
-
-				if (geusses[r] == numbers[r]) {
-					System.out.print("G");
-				} else if (geusses[r] == numbers[0] || geusses[r] == numbers[2] || geusses[r] == numbers[3]) {
-					System.out.print("N");
-				} else {
-					System.out.print("-");
-				}
-				r++;
-
-				if (geusses[r] == numbers[r]) {
-					System.out.print("G");
-				} else if (geusses[r] == numbers[1] || geusses[r] == numbers[0] || geusses[r] == numbers[3]) {
-					System.out.print("N");
-				} else {
-					System.out.print("-");
-				}
-
-				r++;
-				if (geusses[r] == numbers[r]) {
-					System.out.print("G");
-				} else if (geusses[r] == numbers[1] || geusses[r] == numbers[2] || geusses[r] == numbers[0]) {
-					System.out.print("N");
-				} else {
-					System.out.print("-");
-				}
-
-				// het is boven aan de attempt counter en niet samen in een zin
-				System.out.println();
-
+			int r = 0;
+			if (guess[r] == numbers[r]) {
+				System.out.print("G");
+			} else if (guess[r] == numbers[1] || guess[r] == numbers[2] || guess[r] == numbers[3]) {
+				System.out.print("N");
+			} else {
+				System.out.print("-");
 			}
-			return 0;
+			r++;
+			if (guess[r] == numbers[r]) {
+				System.out.print("G");
+			} else if (guess[r] == numbers[0] || guess[r] == numbers[2] || guess[r] == numbers[3]) {
+				System.out.print("N");
+			} else {
+				System.out.print("-");
+			}
+			r++;
+			if (guess[r] == numbers[r]) {
+				System.out.print("G");
+			} else if (guess[r] == numbers[0] || guess[r] == numbers[1] || guess[r] == numbers[3]) {
+				System.out.print("N");
+			} else {
+				System.out.print("-");
+			}
+			r++;
+			if (guess[r] == numbers[r]) {
+				System.out.print("G");
+			} else if (guess[r] == numbers[0] || guess[r] == numbers[1] || guess[r] == numbers[2]) {
+				System.out.print("N");
+			} else {
+				System.out.print("-");
+			}
+			System.out.println();
 		}
+		return false;
 	}
-
+}
