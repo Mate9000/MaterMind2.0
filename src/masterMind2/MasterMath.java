@@ -71,5 +71,6 @@ public class MasterMath {
 			System.out.println();
 		}
 		return false;
+		// >:D
 	}
 }
