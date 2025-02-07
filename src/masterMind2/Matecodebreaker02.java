@@ -31,6 +31,7 @@ public class MateCodeBreaker02 {
 					System.out.println(
 							"Womp, Womp! You've used all attempts.\r\n" + "the secret code was -> " + secretCode);
 					sc.close();
+					//dgajvihzkvlks
 				}
 			}
 		}
